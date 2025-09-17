@@ -14,5 +14,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        
+        // 运行Admin菜单种子
+        $this->call([
+            AdminMenuSeeder::class,
+        ]);
     }
 }
