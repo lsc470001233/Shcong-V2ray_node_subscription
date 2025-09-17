@@ -47,15 +47,16 @@ class V2rayNodeController extends AdminController
                 <div>延迟：{$latency}</div>
                 <div>速度：{$speed}</div>
                 HTML;
-            });
+            })->width('300');
 
-            $grid->column('status')->switch();
+
             $grid->column('关联角色')->display(function () {
                 return $this->adminRoles->map(function ($role) {
                     $statusText = $role->status ? '<span style="color: green;">启用</span>' : '<span style="color: red;">禁用</span>';
                     return $role->name . ' - [' . $statusText . ']';
                 })->implode('<br>');
             });
+            $grid->column('status')->switch();
             $grid->column('remark')->limit(50);
 
             $grid->filter(function (Grid\Filter $filter) {
@@ -146,7 +147,8 @@ class V2rayNodeController extends AdminController
                         return $v->pluck('id')->toArray();
                     }
                     return array_column($v, 'id');
-                });
+                })
+                ->default([1]);
 
             $form->display('created_at');
             $form->display('updated_at');

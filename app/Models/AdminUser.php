@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
+use App\Services\SubscriptionService;
 
 /**
  * Class Administrator.
@@ -91,5 +92,29 @@ class AdminUser extends Model implements AuthenticatableContract
     public function canSeeMenu($menu)
     {
         return true;
+    }
+
+    /**
+     * 订阅链接访问器
+     */
+    public function getSubscriptionLinkAttribute()
+    {
+        return SubscriptionService::generateSubscriptionLink($this);
+    }
+    
+    /**
+     * 生成API令牌
+     */
+    public function generateApiToken()
+    {
+        return SubscriptionService::generateApiToken($this);
+    }
+    
+    /**
+     * 刷新订阅链接
+     */
+    public function refreshSubscriptionLink()
+    {
+        return SubscriptionService::refreshSubscriptionLink($this);
     }
 }

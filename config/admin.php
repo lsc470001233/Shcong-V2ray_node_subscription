@@ -65,7 +65,7 @@ return [
 
         'middleware' => ['web', 'admin'],
 
-        'enable_session_middleware' => false,
+        'enable_session_middleware' => true,
     ],
 
     /*
@@ -106,7 +106,7 @@ return [
     | If your page is going to be accessed via https, set it to `true`.
     |
     */
-    'https' => env('ADMIN_HTTPS', false),
+    'https' => env('ADMIN_HTTPS', true),
 
     /*
     |--------------------------------------------------------------------------

@@ -29,27 +29,29 @@ class AdminUserController extends AdminController
             if (config('admin.permission.enable')) {
                 $grid->column('roles','节点组')->pluck('name')->label('primary', 3);
 
-                $permissionModel = config('admin.database.permissions_model');
-                $roleModel = config('admin.database.roles_model');
-                $nodes = (new $permissionModel())->allNodes();
-                $grid->column('permissions')
-                    ->if(function () {
-                        return ! $this->roles->isEmpty();
-                    })
-                    ->showTreeInDialog(function (Grid\Displayers\DialogTree $tree) use (&$nodes, $roleModel) {
-                        $tree->nodes($nodes);
+                // $permissionModel = config('admin.database.permissions_model');
+                // $roleModel = config('admin.database.roles_model');
+                // $nodes = (new $permissionModel())->allNodes();
+                // $grid->column('permissions')
+                //     ->if(function () {
+                //         return ! $this->roles->isEmpty();
+                //     })
+                //     ->showTreeInDialog(function (Grid\Displayers\DialogTree $tree) use (&$nodes, $roleModel) {
+                //         $tree->nodes($nodes);
 
-                        foreach (array_column($this->roles->toArray(), 'slug') as $slug) {
-                            if ($roleModel::isAdministrator($slug)) {
-                                $tree->checkAll();
-                            }
-                        }
-                    })
-                    ->else()
-                    ->display('');
+                //         foreach (array_column($this->roles->toArray(), 'slug') as $slug) {
+                //             if ($roleModel::isAdministrator($slug)) {
+                //                 $tree->checkAll();
+                //             }
+                //         }
+                //     })
+                //     ->else()
+                //     ->display('');
             }
-
-            $grid->column('status')->switch();
+            $grid->column('订阅链接')->display(function () {
+                return $this->subscription_link;
+            })->limit(20);
+            $grid->column('status','状态')->switch();
             $grid->quickSearch(['id', 'name', 'username']);
 
             // $grid->showQuickEditButton();
