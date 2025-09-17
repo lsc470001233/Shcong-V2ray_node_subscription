@@ -52,10 +52,10 @@ class AdminUserController extends AdminController
             $grid->column('status')->switch();
             $grid->quickSearch(['id', 'name', 'username']);
 
-            $grid->showQuickEditButton();
-            $grid->enableDialogCreate();
+            // $grid->showQuickEditButton();
+            // $grid->enableDialogCreate();
             $grid->showColumnSelector();
-            $grid->disableEditButton();
+            // $grid->disableEditButton();
 
             $grid->actions(function (Grid\Displayers\Actions $actions) {
                 if ($actions->getKey() == AdminUser::DEFAULT_ID) {

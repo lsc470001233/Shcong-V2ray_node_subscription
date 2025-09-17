@@ -14,4 +14,7 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
     $router->resource('auth/users', 'AdminUserController');
+    $router->resource('auth/roles', 'AdminRoleController');
+
+    Route::resource('v2ray-nodes', 'V2rayNodeController');
 });

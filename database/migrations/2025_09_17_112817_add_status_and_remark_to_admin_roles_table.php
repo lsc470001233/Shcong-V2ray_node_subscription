@@ -14,8 +14,8 @@ class AddStatusAndRemarkToAdminRolesTable extends Migration
     public function up()
     {
         Schema::table('admin_roles', function (Blueprint $table) {
-            $table->boolean('status')->default(true)->comment('角色状态：1-启用，0-禁用');
-            $table->text('remark')->nullable()->comment('角色备注');
+            $table->boolean('status')->after('slug')->default(true)->comment('角色状态：1-启用，0-禁用');
+            $table->text('remark')->after('status')->nullable()->comment('角色备注');
         });
     }
 

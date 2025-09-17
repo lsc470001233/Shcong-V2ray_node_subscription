@@ -31,13 +31,14 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection http_path
      * @property Grid\Column|Collection role_id
      * @property Grid\Column|Collection user_id
+     * @property Grid\Column|Collection status
+     * @property Grid\Column|Collection remark
      * @property Grid\Column|Collection value
      * @property Grid\Column|Collection username
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
      * @property Grid\Column|Collection api_token
-     * @property Grid\Column|Collection status
      * @property Grid\Column|Collection uuid
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
@@ -51,6 +52,14 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection abilities
      * @property Grid\Column|Collection last_used_at
      * @property Grid\Column|Collection email_verified_at
+     * @property Grid\Column|Collection v2ray_node_id
+     * @property Grid\Column|Collection admin_role_id
+     * @property Grid\Column|Collection machine_name
+     * @property Grid\Column|Collection machine_ip
+     * @property Grid\Column|Collection machine_port
+     * @property Grid\Column|Collection node_uri
+     * @property Grid\Column|Collection latency
+     * @property Grid\Column|Collection speed
      *
      * @method Grid\Column|Collection id(string $label = null)
      * @method Grid\Column|Collection name(string $label = null)
@@ -72,13 +81,14 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection http_path(string $label = null)
      * @method Grid\Column|Collection role_id(string $label = null)
      * @method Grid\Column|Collection user_id(string $label = null)
+     * @method Grid\Column|Collection status(string $label = null)
+     * @method Grid\Column|Collection remark(string $label = null)
      * @method Grid\Column|Collection value(string $label = null)
      * @method Grid\Column|Collection username(string $label = null)
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
      * @method Grid\Column|Collection api_token(string $label = null)
-     * @method Grid\Column|Collection status(string $label = null)
      * @method Grid\Column|Collection uuid(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
@@ -92,6 +102,14 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection abilities(string $label = null)
      * @method Grid\Column|Collection last_used_at(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
+     * @method Grid\Column|Collection v2ray_node_id(string $label = null)
+     * @method Grid\Column|Collection admin_role_id(string $label = null)
+     * @method Grid\Column|Collection machine_name(string $label = null)
+     * @method Grid\Column|Collection machine_ip(string $label = null)
+     * @method Grid\Column|Collection machine_port(string $label = null)
+     * @method Grid\Column|Collection node_uri(string $label = null)
+     * @method Grid\Column|Collection latency(string $label = null)
+     * @method Grid\Column|Collection speed(string $label = null)
      */
     class Grid {}
 
@@ -118,13 +136,14 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection http_path
      * @property Show\Field|Collection role_id
      * @property Show\Field|Collection user_id
+     * @property Show\Field|Collection status
+     * @property Show\Field|Collection remark
      * @property Show\Field|Collection value
      * @property Show\Field|Collection username
      * @property Show\Field|Collection password
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
      * @property Show\Field|Collection api_token
-     * @property Show\Field|Collection status
      * @property Show\Field|Collection uuid
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
@@ -138,6 +157,14 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection abilities
      * @property Show\Field|Collection last_used_at
      * @property Show\Field|Collection email_verified_at
+     * @property Show\Field|Collection v2ray_node_id
+     * @property Show\Field|Collection admin_role_id
+     * @property Show\Field|Collection machine_name
+     * @property Show\Field|Collection machine_ip
+     * @property Show\Field|Collection machine_port
+     * @property Show\Field|Collection node_uri
+     * @property Show\Field|Collection latency
+     * @property Show\Field|Collection speed
      *
      * @method Show\Field|Collection id(string $label = null)
      * @method Show\Field|Collection name(string $label = null)
@@ -159,13 +186,14 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection http_path(string $label = null)
      * @method Show\Field|Collection role_id(string $label = null)
      * @method Show\Field|Collection user_id(string $label = null)
+     * @method Show\Field|Collection status(string $label = null)
+     * @method Show\Field|Collection remark(string $label = null)
      * @method Show\Field|Collection value(string $label = null)
      * @method Show\Field|Collection username(string $label = null)
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
      * @method Show\Field|Collection api_token(string $label = null)
-     * @method Show\Field|Collection status(string $label = null)
      * @method Show\Field|Collection uuid(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
@@ -179,6 +207,14 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection abilities(string $label = null)
      * @method Show\Field|Collection last_used_at(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
+     * @method Show\Field|Collection v2ray_node_id(string $label = null)
+     * @method Show\Field|Collection admin_role_id(string $label = null)
+     * @method Show\Field|Collection machine_name(string $label = null)
+     * @method Show\Field|Collection machine_ip(string $label = null)
+     * @method Show\Field|Collection machine_port(string $label = null)
+     * @method Show\Field|Collection node_uri(string $label = null)
+     * @method Show\Field|Collection latency(string $label = null)
+     * @method Show\Field|Collection speed(string $label = null)
      */
     class Show {}
 

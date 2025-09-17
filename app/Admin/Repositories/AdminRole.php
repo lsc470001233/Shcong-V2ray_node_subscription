@@ -2,10 +2,10 @@
 
 namespace App\Admin\Repositories;
 
-use App\Models\V2rayNode as Model;
+use App\Models\AdminRole as Model;
 use Dcat\Admin\Repositories\EloquentRepository;
 
-class V2rayNode extends EloquentRepository
+class AdminRole extends EloquentRepository
 {
     /**
      * Model.
